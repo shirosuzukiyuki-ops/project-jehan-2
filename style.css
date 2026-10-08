@@ -1,0 +1,270 @@
+/* =========================================
+   RESET
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   BODY
+========================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a0b2e;
+    color: #e0d4f7;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   HEADER / NAVBAR
+========================================= */
+header {
+    background-color: #12061f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    color: #dfb3ff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #d1c4e9;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(223, 179, 255, 0.6);
+}
+
+/* =========================================
+   HERO / BERANDA
+========================================= */
+.hero {
+    max-width: 1100px;
+    min-height: 550px;
+    margin: auto;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.sapaan {
+    color: #b388ff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    color: #c5cae9;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.hero p {
+    color: #d1c4e9;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   TOMBOL
+========================================= */
+.tombol {
+    display: inline-block;
+    background-color: #7c4dff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tombol:hover {
+    background-color: #651fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(124, 77, 255, 0.4);
+}
+
+/* =========================================
+   FOTO PROFIL
+========================================= */
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #7c4dff;
+    box-shadow: 0 8px 25px rgba(124, 77, 255, 0.3);
+}
+
+/* =========================================
+   SECTION TENTANG
+========================================= */
+.tentang {
+    background-color: #140724;
+    padding: 70px 20px;
+}
+
+.judul {
+    text-align: center;
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+.tentang-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: #23113c;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #3c1e63;
+    color: #d1c4e9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(124, 77, 255, 0.2);
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    margin-left: 20px;
+}
+
+/* =========================================
+   KONTAK
+========================================= */
+.kontak {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.kontak p {
+    color: #d1c4e9;
+}
+
+.kontak-box {
+    margin-top: 25px;
+    background-color: #23113c;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #3c1e63;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #d1c4e9;
+}
+
+.kontak-box p {
+    margin-bottom: 12px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: #0f041a;
+    color: #9575cd;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE / HP
+========================================= */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tentang-container {
+        grid-template-columns: 1fr;
+    }
+
+    .judul {
+        font-size: 28px;
+    }
+}
